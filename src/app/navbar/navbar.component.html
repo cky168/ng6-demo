@@ -1,3 +1,6 @@
-<p>
-  navbar works!
-</p>
+<mat-toolbar  [style.background] = "(login$ | async) ? 'darkviolet' : 'seagreen'" class="navbar">
+  <a mat-button routerLink="/">NG6</a>
+  <span class="to-right"></span>
+  <a mat-button *ngIf="!(login$ | async)" routerLink="/user/login">Login</a>
+  <a mat-button *ngIf="login$ | async" (click)="logout()">Logout</a>  
+</mat-toolbar>

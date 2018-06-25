@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable,of } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  login$: Observable<boolean>;
+    constructor() { }
+    ngOnInit() {
+        this.login$ = of(true);
+    }
+    logout() {
+        this.login$ = of(false);
+    }
 
 }
