@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ShareModule } from './share/share.module';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ShareModule
+    ShareModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
