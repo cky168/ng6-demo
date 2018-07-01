@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { MatButtonModule,MatToolbarModule,MatCardModule, MatFormFieldModule, MatCheckboxModule } from '@angular/material';
 import { MatInputModule,MatIconModule, MatMenuModule, MatSnackBarModule  } from '@angular/material';
-import { AppConfig } from './app.config';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { AppConfig } from './app.config';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -14,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatCheckboxModule,
     MatInputModule,
+    MatIconModule,
     MatMenuModule,
     MatSnackBarModule,
     ReactiveFormsModule
@@ -22,12 +25,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatToolbarModule,
     MatCardModule,
-        MatFormFieldModule,
-        MatCheckboxModule,
-        MatInputModule,
-        MatMenuModule,
-        MatSnackBarModule,
-        ReactiveFormsModule
+    MatFormFieldModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatIconModule,
+    MatMenuModule,
+    MatSnackBarModule,
+    ReactiveFormsModule
   ],
   declarations: [],
   providers: [AppConfig]

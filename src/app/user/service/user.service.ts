@@ -44,7 +44,7 @@ export class UserService {
               this.currentUser.next(loginData.username);
               return true;
             } else {
-              console.log('can not login');
+              //console.log('can not login');
               return false;
             }
           }),catchError(error=>{

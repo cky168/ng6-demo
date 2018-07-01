@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
+
 import { UserService } from '../service/user.service';
 
 @Component({
@@ -11,12 +12,11 @@ import { UserService } from '../service/user.service';
 export class LoginComponent implements OnInit {
 
     public form: FormGroup;
-
-  constructor(
-    private fb: FormBuilder,
-    private userService: UserService,
-    private snackbar: MatSnackBar
-) { }
+    constructor(
+        private fb: FormBuilder,
+        private userService: UserService,
+        private snackbar: MatSnackBar
+    ) { }
 
    ngOnInit() {
         this.form = this.fb.group({
@@ -29,15 +29,15 @@ export class LoginComponent implements OnInit {
     get password() { return this.form.get('password'); }
     get rememberMe() { return this.form.get('rememberMe') }
     
-login() {
-  this.userService.login(this.form.value)
-      .subscribe(res => {
-          if (res) {
-              this.snackbar.open('login success', 'OK', { duration: 3000});
-          } else {
-              this.snackbar.open('pls check username/password', 'OK', {duration: 3000});
-          }
-      })
-}
+    login() {
+        this.userService.login(this.form.value)
+            .subscribe(res => {
+                if (res) {
+                    this.snackbar.open('login success', 'OK', { duration: 3000});
+                } else {
+                    this.snackbar.open('pls check username/password', 'OK', {duration: 3000});
+                }
+            })
+    }
 
 }
