@@ -1,7 +1,7 @@
 # Ng6Demo
   - This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
   - Login page with JWT authentication.
-  - Get back user info. from backend server through api 
+  - Get back user info. from backend server through api (https://github.com/cky168/apiServer)
 
 ## Development server
 
